@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES</title>
+</head>
+<body style="background-color: azure;">
+<h1><u>Games</u></h1>
+
+<p1 style="background-color: blueviolet;color:aquamarine" >Games are the bulidings blocks of our external strength. It involves various physical as well mental games.</p1>
+<p>->The length of the above string is : - </p>
+<p id="string1"> </p>
+<br>
+<p2>->The above text in the capital form will be as follows: - </p2>
+<p id="string2" style="color: darkgoldenrod"></p>
+<br>
+<p3>->The exact position of the physical in the above string is : -  </p3>
+<p id="string3" style="color:red"></p>
+<br>
+<p4>->The updated string will be : - </p4>
+<p id="string4" style="color:blue"> </p>
+<br>
+<p5>->The repeated string will be as : - </p5>
+<p id="string5" style="color:darkorange"></p>
+
+<h1><u> Playing with  Numbers</u></h1>
+
+
+<pre>->Just consider numbers 9 and 6.75. When I try to add the two numbers by converting them into string, the result will be: -  </pre>
+
+<p id="num1" style="color:brown"></p> 
+<br>
+<p2> -> Now consider a number 10.756. It 's round form up to first three numbers will be: - </p2>
+<p id="num2" style="color:darksalmon" ></p>
+<br>
+<p3> ->If two numbers are 12.7653 and 7.687364. Then, the product will be : - </p3>
+<p id="num3" style="color:mediumseagreen"></p>
+<br>
+<p4> ->If number is 5.64873637587.The exponential upto first5 numbers will be : -  </p4>
+<p id="num4" style="color:brown"></p>
+<br>
+<p6>->Let's consider a number 15.9876. If we extract the integer part from it, we get: - </p6>
+<p id="num5" style="color:purple"></p>
+
+<h1><u> Arrays</u></h1>
+
+<p1># Let's consider an array ["Brown" , "Purple", 5674]. The size of this array will be : - </p1>
+<p id="array1" style="color: darkgreen"></p>
+
+<p2>#If I want to convert this array into a string. The output will be: - </p2>
+<p id="array2" style="color:darkorange"></p>
+
+<p3># The output after removing the number from the array will be: -  </p3>
+<p id="array3" style="color:cadetblue"></p>
+
+<p4> # If I want to add another number 345 into the array. The result will be: -  </p4>
+<p id="array4"></p>
+
+<p5>#The output after joining the array ["IT","Civil" , 6457] with the existing array: - </p5>
+<p id="array5" style="color:chartreuse"></p>
+
+<h1><u> Dates</u></h1>
+<p1>*The current date and time. When, I am preparing this assignment is: - </p1>
+<p id="date1" style="color:chocolate"></p>
+
+<p2>*The current year is: - </p2>
+<p id="year" style="color:darkolivegreen"></p>
+
+<p3>*The current month is: - </p3>
+<p id="month" style="color:teal"></p>
+
+<p4>*The current day is: - </p4>
+<p id="day" style="color:indigo"></p>
+
+<p5>*The current hour is: - </p5>
+<p id="hour" style="color:purple"></p>
+
+<h1><u>Functions</u></h1>
+<p1>$ The perimeter of a rectangle with length 4cm and 5cm will be: - </p1>
+<p id="f1" style="color:cornflowerblue"></p>
+<p2>$ The distance covered by an object . If, it's initial velocity is 3m/s takes time 4 sec with the accelration of 5 will be:-</p2>
+<p id="f2" style="color:yellowgreen"></p>
+
+<script>
+let text="Games are the bulidings blocks of our external strength. It involves various physical as well mental games.";
+document.getElementById("string1").innerHTML = text.length;
+document.getElementById("string2").innerHTML = text.toUpperCase();
+document.getElementById("string3").innerHTML = text.indexOf("physical");
+document.getElementById("string4").innerHTML = text.replace("Games" , "Activities");
+document.getElementById("string5").innerHTML = text.repeat(3);
+
+let x= 9, y=6.75;
+document.getElementById("num1").innerHTML =   x.toString() + y.toString();
+let a= 10.756;
+document.getElementById("num2").innerHTML = a.toFixed(1);
+let b=12.7653 , c=7.687364,  d=b*c;
+document.getElementById("num3").innerHTML = d.valueOf();
+let z= 5.64873637587;
+document.getElementById("num4").innerHTML = z.toExponential(4);
+let num = 15.9876;
+document.getElementById("num5").innerHTML = parseInt(num);
+
+const arrays = ["Brown" , "Purple", 5674];
+document.getElementById("array1").innerHTML = arrays.length;
+document.getElementById("array2").innerHTML = arrays.toString();
+arrays.pop(); 
+document.getElementById("array3").innerHTML = arrays.toString();
+const array_updated = arrays.push(345);
+document.getElementById("array4").innerHTML = arrays;
+const array_new = ["IT","Civil" , 6457];
+const merged_array = arrays.concat(array_new);
+document.getElementById("array5").innerHTML = merged_array.toString();
+
+const l = new Date();
+document.getElementById("date1").innerHTML = l;
+document.getElementById("year").innerHTML = l.getFullYear();
+document.getElementById("month").innerHTML = l.getMonth() + 1; 
+document.getElementById("day").innerHTML = l.getDate();
+document.getElementById("hour").innerHTML = l.getHours();
+
+function perimeter(l,b)
+{
+    return 2*(l+b);
+}
+let f= perimeter(4,5);
+document.getElementById("f1").innerHTML = f;
+function initial_speed(a,b,c)
+{
+    return a*b +1/2*c*(b**2);
+}
+let t= initial_speed(3,4,5);
+document.getElementById("f2").innerHTML = t;
+
+</script>
+
+</body>
+</html>
